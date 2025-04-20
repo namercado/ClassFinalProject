@@ -54,7 +54,13 @@ class GradeTracker:
             "highest_grade": highest_grade,
             "lowest_grade": lowest_grade
         }
-
+    
+    def get_top_n_students(self, n):
+        """
+        Returns the top n students by score. O(n log n) due to sorting.
+        """
+        # sort descending
+        return sorted(self.students, key=lambda s: s.score, reverse=True)[:n]
 
 tracker = GradeTracker()
 
