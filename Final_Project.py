@@ -1,4 +1,4 @@
-#Student = st
+
 
 
 class Student:
