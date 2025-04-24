@@ -1,6 +1,7 @@
 import bisect
 import random
 import time
+from tqdm import tqdm
 
 class Student:
     def __init__(self, name, student_id, score, attendance):
@@ -59,10 +60,10 @@ class StudentManager:
         return sum(s.score for s in self.students) / len(self.students)
 
     def performance_test(self):
-        # Generate 10,000 random students
+        # Generate 10,000 random students with a progress bar
         names = ["John", "Jane", "Alice", "Bob", "Charlie", "Diana", "Eve", "Frank"]
         self.students = []
-        for _ in range(10000):
+        for _ in tqdm(range(10000), desc="Creating students"):
             student = Student(
                 name=random.choice(names) + " " + random.choice(["Smith", "Lee", "Doe"]),
                 student_id=random.randint(1000, 9999),
