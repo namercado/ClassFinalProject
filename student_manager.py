@@ -68,13 +68,17 @@ class StudentManager:
 
     def performance_test(self):
         # Test search performance with large dataset
-        names = ["John", "Jane", "Alice", "Bob", "Charlie", "Diana", "Eve", "Frank"]
+        names = ["John", "Jane", "Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia",
+                 'Kevin', "Laura", "Michael", "Nina", "Oliver", "Paula", "Quentin", "Rachel", "Steven", "Tina"]
         self.students = []  # Reset student list
 
         # Generate 10,000 random students with progress bar
         for _ in tqdm(range(10000), desc="Creating students"):
             student = Student(
-                name=random.choice(names) + " " + random.choice(["Smith", "Lee", "Doe"]),
+                name=random.choice(names) + " " + random.choice(["Smith", "Lee", "Doe","Anderson", "Brown", "Clark", "Davis", "Evans",
+    "Garcia", "Harris", "Johnson", "King", "Lewis",
+    "Martinez", "Nelson", "Parker", "Roberts", "Scott",
+    "Turner", "Walker", "Young", "Zimmerman", "Lopez"]),
                 student_id=random.randint(1000, 9999),
                 score=random.randint(0, 100),
                 attendance=random.randint(50, 100)
