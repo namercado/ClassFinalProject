@@ -86,12 +86,12 @@ class StudentManager:
             self.add_student(student)
 
         # Add test student with known values
-        test_student = Student("Z_TEST_NAME", 9999, 85, 90)
+        test_student = Student("John Doe", 9999, 85, 90)
         self.add_student(test_student)
 
         # Test linear search performance
         start = time.time()
-        found_linear = self.linear_search_by_name("Z_TEST_NAME")
+        found_linear = self.linear_search_by_name("John Doe")
         linear_time = time.time() - start
 
         # Test binary search performance (requires sorted data)
